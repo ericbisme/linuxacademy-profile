@@ -1,0 +1,15 @@
+{
+  "name": "linuxacademy-profile",
+  "version": "0.1.0",
+  "author": "Eric Boliner",
+  "summary": "Profiles for Linux Academy PPT-204",
+  "license": "Apache-2.0",
+  "source": "https://github.com/ericbisme/linuxacademy-profile",
+  "project_page": "https://github.com/ericbisme/linuxacademy-profile",
+  "issues_url": "https://github.com/ericbisme/linuxacademy-profile",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+
