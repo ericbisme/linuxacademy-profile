@@ -25,9 +25,6 @@ class profile::puppetboard {
      wsgi_socket_prefix => "/var/run/wsgi",
   }
 
-	# Configure Puppetboard
-	class { 'puppetboard': }
-
 	# Access Puppetboard from example.com/puppetboard
 	class { 'puppetboard::apache::conf': }
 }
