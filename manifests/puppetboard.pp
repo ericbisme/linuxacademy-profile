@@ -5,7 +5,7 @@ class profile::puppetboard {
   class { 'puppetboard':
     groups              => 'puppet',
     manage_virtualenv   => true,
-    puppetdb_host       => 'puppet.ericbisme.io',
+    puppetdb_host       => 'localhost'
     puppetdb_port       => '8080',
     puppetdb_key        => "${ssl_dir}/private_keys/${puppetboard_certname}.pem",
     puppetdb_ssl_verify => "${ssl_dir}/certs/ca.pem",
