@@ -12,19 +12,16 @@ class profile::puppetboard {
     puppetdb_cert       => "${ssl_dir}/certs/${puppetboard_certname}.pem",
   }
 
-	# Configure Apache
-	# Ensure it does *not* purge configuration files
-	class { 'apache':
-		purge_configs => false,
-		mpm_module    => 'prefork',
-		default_vhost => true,
-		default_mods  => false,
-	}
+  class { 'apache':
+    purge_configs => false,
+    mpm_module    => 'prefork',
+    default_vhost => true,
+    default_mods  => false,
+  }
 
-	class { 'apache::mod::wsgi':
+  class { 'apache::mod::wsgi':
      wsgi_socket_prefix => "/var/run/wsgi",
   }
 
-	# Access Puppetboard from example.com/puppetboard
-	class { 'puppetboard::apache::conf': }
+  class { 'puppetboard::apache::conf': }
 }
